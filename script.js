@@ -50,8 +50,8 @@ function playRound(playerSelection, computerSelection) {
         return 'Você perdeu! Tesoura perde da pedra...'; 
 
     } 
-    playerRound(playerSelection, computerSelection)
-  }
+    playRound(playerSelection, computerSelection);
+  };
 
   //Fazer com que sejam jogadas 5 partidas
 
@@ -64,11 +64,11 @@ const game = () => {
         console.log(`Pontos você: ${playerScore}`);
     }
     if (computerScore > playerScore) {
-        console.log(`Você perdeu para o computador por ${computerScore} a ${playerScore}`);
+        console.log(`R. FINAL: Você perdeu para o computador por ${computerScore} a ${playerScore}`);
     } else if (computerScore < playerScore) {
-        console.log(`Parabéns! Você ganhou do computador por ${playerScore} a ${computerScore}`)
+        console.log(`R. FINAL: Parabéns! Você ganhou do computador por ${playerScore} a ${computerScore}`)
     } else {
-        console.log(`Você e o computador empataram em ${computerScore} a ${playerScore}`)
+        console.log(`R. FINAL: Você e o computador empataram em ${computerScore} a ${playerScore}`)
     }
 
 }
