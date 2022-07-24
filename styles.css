@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+header {
+    margin-bottom: 50px;
+}
+
+.logo {
+    display: flex;
+    justify-content: flex-end;
+    margin: auto;
+    margin-top: 30px;
+    max-width: 230px;
+} 
+
+.score-board {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+.score {
+    background-color: #1E3148;
+    border: 2px dotted white;
+    border-radius: 5px;
+    padding: 10px 25px;
+}
+
+.user-label {
+    background-color: #43B14B;
+    border: 3px solid #43B14B;
+    border-radius: 5px 0 0 5px;
+    padding-left: 7px;
+}
+
+.robot-label {
+    background-color: #43B14B;
+    border: 3px solid #43B14B;
+    border-radius: 0 5px 5px 0;
+    padding-right: 7px;
+}
+
+
+.player-score {
+    font-size: x-large;
+}
+.computer-score {
+    font-size: x-large;
+}
+
+.botao-iniciar {
+    background-color: #43B14B;
+    color: white;
+    text-align: center;
+    border: 1px solid #43B14B;
+    border-radius: 5px;
+    padding: 10px 100px;
+    font-family: 'Asap', sans-serif;
+}
+
+.botao-iniciar > p {
+    
+}
+
+body {
+    
+    background-color: #5C413F;
+    color: white;
+    font-family: 'Asap', sans-serif;
+   
+}
+
+.jogo {
+    border: 3px solid white;
+    border-radius: 8px;
+    max-width: 500px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+}
+
+.choices {
+    display: flex;
+    transition: all 0.2s ease;
+}
+
+.choice:hover {
+    transform: scale(1.05);
+}
+
+.hide {
+    display: none;
+}
+
+

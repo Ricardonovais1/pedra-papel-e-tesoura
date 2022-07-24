@@ -4,12 +4,47 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Pedra, papel e tesoura</title>
+    <link rel="stylesheet" href="./styles.css">
 </head>
+<header>
+    <img class='logo' src="./img/Cópia de Logo Ricardo Novais Fundo Escuro.png" alt="logo-ricardo-novais">
+</header>
 <body>
-<!--     <button class="display-result">Mostrar Resultado</button>
- -->
 
+    <div class="jogo">
+        <h1 class="title">Pedra, papel e tesoura</h1>
+
+    <!-- <div class="botao-iniciar">
+        <h2>Iniciar o jogo</h2>
+        <p>Melhor de 5!</p>
+    </div> -->
+    <div class="choices">
+    <div class="choice">
+        <img id="pedra" src="./img/Pedra_menor.png" alt="Pedra">
+    </div>
+    <div class="choice">
+        <img id="papel" src="./img/Papel_menor.png" alt="Papel">
+    </div>
+    <div class="choice">
+        <img id="tesoura" src="./img/Tesoura_menor.png" alt="Tesoura">
+    </div>
+        
+    </div>
+    <div class="score-board">   
+        <span class="user-label">Você</span>
+        <div class="score">
+            <span class="player-score">0</span>:<span class="computer-score">0</span>
+        </div>
+        <span class="robot-label">Robô</span>
+    </div>
+    <div class="round-result">
+        <h3>Escolha uma opção para iniciar o jogo</h3>
+    </div>
+    <div class="final-result">
+        <h2></h3>
+    </div>
+</div>
     
     <script src="./script.js"></script>
 </body>
