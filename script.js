@@ -41,27 +41,24 @@ main();
 
 
 const win = (playerSelection, computerSelection) => {
-    playerScore++;
     playerScore_span.textContent = playerScore;
-    computerScore_span.textContent = computerScore;
+    computerScore_span.textContent = computerScore; 
     roundResult_div.textContent = `Você ganhou, ${playerSelection} vence ${computerSelection}`;
-
 };
 
 const lose = (playerSelection, computerSelection) => {
-    computerScore++;
-    playerScore_span.textContent = playerScore;
-    computerScore_span.textContent = computerScore;
+    playerScore_span.textContent = playerScore; 
+    computerScore_span.textContent = computerScore; 
     roundResult_div.textContent = `Você perdeu, ${playerSelection} vence ${computerSelection}`;
-
 };
 
 const draw = (playerSelection, computerSelection) => {
     playerScore_span.textContent = playerScore;
     computerScore_span.textContent = computerScore;
     roundResult_div.textContent = `Empate, ${playerSelection} vs. ${computerSelection}`;
-
 };
+
+
 //Selecionar a opção do comuputador de forma randômica:
 
 function computerPlay() {
@@ -126,19 +123,18 @@ function computerPlay() {
 
   const playRound = (playerSelection) => {
 
-    userScore = 0;
-    computerScore = 0;
-
     computerSelection = computerPlay();
     switch(playerSelection + computerSelection) {
         case 'pedratesoura':
         case 'papelpedra':
         case 'tesourapapel':
+            playerScore++;
             win(playerSelection, computerSelection);
             break;
         case 'pedrapapel':
         case 'papeltesoura':
         case 'tesourapedra':
+            computerScore++;
             lose(playerSelection, computerSelection);
             break;
         case 'pedrapedra':
@@ -152,14 +148,13 @@ function computerPlay() {
     
   };
 
-const game = () => {
+    const game = () => {
     for(let i = 0; i < 5; i++) {
 
         playRound()
+        
 
-        /* console.log(playRound(playerSelection, computerSelection));
-        console.log(`Pontos robô: ${computerScore}`);
-        console.log(`Pontos você: ${playerScore}`); */
+        
     }
     if (computerScore > playerScore) {
         finalResult_div.textContent = `R. FINAL: Você perdeu para o computador por ${computerScore} a ${playerScore}`;
@@ -171,9 +166,13 @@ const game = () => {
 
 }
 
-game() 
-    
+game()  
 
+//---------------------------------------------------------------
+    
+/* console.log(playRound(playerSelection, computerSelection));
+        console.log(`Pontos robô: ${computerScore}`);
+        console.log(`Pontos você: ${playerScore}`); */
    
 
 
