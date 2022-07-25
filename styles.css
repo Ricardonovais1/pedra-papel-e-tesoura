@@ -1,24 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Asap:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
 
 header {
-    margin-bottom: 50px;
+    margin-bottom: 25px;
 }
 
 .logo {
     display: flex;
     justify-content: flex-end;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 15px;
     max-width: 230px;
 } 
 
-.score-board {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    align-items: center;
-}
 
 .score {
     background-color: #1E3148;
@@ -75,6 +68,8 @@ body {
     border: 3px solid white;
     border-radius: 8px;
     max-width: 500px;
+    max-height: 350px;
+    min-height: 300px;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -93,6 +88,7 @@ body {
 
 .hide {
     display: none;
+
 }
 
 .final-result {
@@ -103,6 +99,25 @@ body {
     text-align: center;
     margin: auto;
     flex-wrap: wrap;
+}
+
+.score-board {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    align-items: center;
 
 }
 
+.pulse {
+    animation: resultpulse .3s linear alternate-reverse;
+    animation-iteration-count: 4;
+    animation-fill-mode: forwards;
+} 
+
+@keyframes resultpulse {
+    
+    to { transform: scale(1.1); }
+
+}
