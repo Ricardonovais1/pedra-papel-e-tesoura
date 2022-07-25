@@ -138,7 +138,5 @@ const draw = (playerSelection, computerSelection) => {
     }
   };
 
-  function titleResult() { 
-     
-  };
+  
 
