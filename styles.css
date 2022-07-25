@@ -95,4 +95,14 @@ body {
     display: none;
 }
 
+.final-result {
+    display: flex;
+    font-family: 'Asap', sans-serif;
+    font-size: 25px;
+    max-width: 300px;
+    text-align: center;
+    margin: auto;
+    flex-wrap: wrap;
+
+}
 

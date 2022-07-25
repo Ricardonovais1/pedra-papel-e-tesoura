@@ -1,7 +1,7 @@
 
 
 //Cash the DOM:
-const title_h2 = document.querySelector('title');
+const title_h1 = document.querySelector('title');
 const botaoIniciar_div = document.querySelector('botao-iniciar');
 const choice_div = document.querySelector('choice');
 const pedra = document.getElementById('pedra');
@@ -17,6 +17,7 @@ var computerScore = 0;
 
 let playerSelection = '';
 const displayResult_button = document.querySelector('.display-result');
+
 
 const main = () => {
     pedra.addEventListener('click', () => {
@@ -124,6 +125,7 @@ function computerPlay() {
   const playRound = (playerSelection) => {
 
     computerSelection = computerPlay();
+
     switch(playerSelection + computerSelection) {
         case 'pedratesoura':
         case 'papelpedra':
@@ -142,31 +144,56 @@ function computerPlay() {
         case 'tesouratesoura':
             draw(playerSelection, computerSelection);
             break;
+           
+    };
+    endGame(playerScore, computerScore);
 
-    }
-    
-    
   };
 
-    const game = () => {
+  const endGame = (playerScore, computerScore) => {
+    if (playerScore < 5 && computerScore < 5) 
+    {
+        playRound(playerSelection);
+
+    } 
+    else if (playerScore === 5 && computerScore < 5) 
+    {
+        finalResult_div.textContent = `Parabéns! Você ganhou do computador por ${playerScore} a ${computerScore}`;
+        roundResult_div.classList.add('hide');
+        pedra.classList.add('hide');
+        papel.classList.add('hide');
+        tesoura.classList.add('hide');
+
+
+    }
+    else if (computerScore === 5 && playerScore < 5) 
+    {
+        finalResult_div.textContent = `Você perdeu para o computador por ${computerScore} a ${playerScore}`;
+        roundResult_div.classList.add('hide');
+        pedra.classList.add('hide');
+        papel.classList.add('hide');
+        tesoura.classList.add('hide');
+
+
+    }
+  };
+   /*  const game = () => {
     for(let i = 0; i < 5; i++) {
 
-        playRound()
-        
 
         
-    }
+    };
     if (computerScore > playerScore) {
         finalResult_div.textContent = `R. FINAL: Você perdeu para o computador por ${computerScore} a ${playerScore}`;
     } else if (computerScore < playerScore) {
         finalResult_div.textContent = `R. FINAL: Parabéns! Você ganhou do computador por ${playerScore} a ${computerScore}`;
     } else {
         finalResult_div.textContent = `R. FINAL: Você e o computador empataram em ${computerScore} a ${playerScore}`;
-    }
+    };
 
-}
+};
 
-game()  
+game()   */
 
 //---------------------------------------------------------------
     
