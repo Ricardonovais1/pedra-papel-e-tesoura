@@ -19,7 +19,7 @@ let playerSelection = '';
 const displayResult_button = document.querySelector('.display-result');
 
 
-// Início do jogo 
+// Início do jogo
 const main = () => {
     pedra.addEventListener('click', () => {
         playRound('pedra');
@@ -35,7 +35,7 @@ const main = () => {
         playRound('tesoura');
         game();
     });
-}; 
+};
 
 main();
 
@@ -53,19 +53,19 @@ function computerPlay() {
     case 2:
         return 'tesoura'
         break;
-    };   
+    };
 };
 
 
 const win = (playerSelection, computerSelection) => {
     playerScore_span.textContent = playerScore;
-    computerScore_span.textContent = computerScore; 
+    computerScore_span.textContent = computerScore;
     roundResult_div.textContent = `Você ganhou, ${playerSelection} vence ${computerSelection}`;
 };
 
 const lose = (playerSelection, computerSelection) => {
-    playerScore_span.textContent = playerScore; 
-    computerScore_span.textContent = computerScore; 
+    playerScore_span.textContent = playerScore;
+    computerScore_span.textContent = computerScore;
     roundResult_div.textContent = `Você perdeu, ${playerSelection} vence ${computerSelection}`;
 };
 
@@ -92,14 +92,14 @@ const draw = (playerSelection, computerSelection) => {
         case 'papeltesoura':
         case 'tesourapedra':
             computerScore++;
-            lose(playerSelection, computerSelection);
+            lose( computerSelection, playerSelection);
             break;
         case 'pedrapedra':
         case 'papelpapel':
         case 'tesouratesoura':
             draw(playerSelection, computerSelection);
             break;
-           
+
     };
     endGame(playerScore, computerScore);
   };
@@ -111,11 +111,11 @@ const draw = (playerSelection, computerSelection) => {
 
 
   const endGame = (playerScore, computerScore) => {
-    if (playerScore < 5 && computerScore < 5) 
+    if (playerScore < 5 && computerScore < 5)
     {
         playRound(playerSelection);
-    } 
-    else if (playerScore === 5 && computerScore < 5) 
+    }
+    else if (playerScore === 5 && computerScore < 5)
     {
         finalResult_div.textContent = `Parabéns! Você ganhou do computador por ${playerScore} a ${computerScore}`;
         roundResult_div.classList.add('hide');
@@ -124,9 +124,9 @@ const draw = (playerSelection, computerSelection) => {
         tesoura.classList.add('hide');
         const scoreBoard_div = document.querySelector('score-board');
         scoreBoard_div.classList.add('pulse');
-        const titleWhenResult = document.getElementById('title').textContent = `RESULTADO FINAL:`;  
+        const titleWhenResult = document.getElementById('title').textContent = `RESULTADO FINAL:`;
     }
-    else if (computerScore === 5 && playerScore < 5) 
+    else if (computerScore === 5 && playerScore < 5)
     {
         finalResult_div.textContent = `Você perdeu para o computador por ${computerScore} a ${playerScore}`;
         roundResult_div.classList.add('hide');
@@ -134,9 +134,6 @@ const draw = (playerSelection, computerSelection) => {
         papel.classList.add('hide');
         tesoura.classList.add('hide');
         scoreBoard_div.classList.add('pulse');
-        const titleWhenResult = document.getElementById('title').textContent = `RESULTADO FINAL:`;  
+        const titleWhenResult = document.getElementById('title').textContent = `RESULTADO FINAL:`;
     }
   };
-
-  
-
