@@ -12,6 +12,14 @@ header {
     max-width: 230px;
 }
 
+.result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
 .replay {
     background-color: #43B14B;
     padding: .5em 4rem;
@@ -137,8 +145,9 @@ body {
 }
 
 @media only screen and (max-width: 500px) {
-    .replay {
-        max-width: 60em;
 
+    .replay {
+        width: 90%;
+        margin: auto;
     }
 }
