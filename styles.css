@@ -10,8 +10,27 @@ header {
     margin: auto;
     margin-top: 15px;
     max-width: 230px;
-} 
+}
 
+.replay {
+    background-color: #43B14B;
+    padding: .5em 4rem;
+    font-family: 'Asap', sans-serif;
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    width: 25em;
+    color: #fff;
+    border: none;
+    border-radius: .5em;
+    margin-top: 1rem;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.replay.show {
+    opacity: 1;
+}
 
 .score {
     background-color: #1E3148;
@@ -52,16 +71,12 @@ header {
     font-family: 'Asap', sans-serif;
 }
 
-.botao-iniciar > p {
-    
-}
-
 body {
-    
+
     background-color: #5C413F;
     color: white;
     font-family: 'Asap', sans-serif;
-   
+
 }
 
 .jogo {
@@ -88,7 +103,6 @@ body {
 
 .hide {
     display: none;
-
 }
 
 .final-result {
@@ -114,10 +128,17 @@ body {
     animation: resultpulse .3s linear alternate-reverse;
     animation-iteration-count: 4;
     animation-fill-mode: forwards;
-} 
+}
 
 @keyframes resultpulse {
-    
+
     to { transform: scale(1.1); }
 
+}
+
+@media only screen and (max-width: 500px) {
+    .replay {
+        max-width: 60em;
+
+    }
 }
